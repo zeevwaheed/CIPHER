@@ -1,0 +1,26 @@
+CIPHER PUBLIC BETA — PHASE 2 BUILD CHECKPOINT
+Date: 2026-11-23
+
+Implemented in this checkpoint:
+- Supabase email/password authentication integration (from Phase 1).
+- Cloud profile save/load (from Phase 1).
+- Added owner-only cipher_cloud_state JSONB table/policy for a beta cloud snapshot.
+- Frontend cloud load/save adapter for finance, sticky-note JSON, memories, personality, chat archive, and legacy chat.
+- Debounced sync on core data persistence functions.
+- Cloud-empty account import prompt for existing browser data, with ownership confirmation.
+- AI requests now include Supabase bearer access token.
+- Configurable API base URL for a separately hosted API; status endpoint uses same base.
+- Guard against oversized cloud snapshots; image-heavy notes may require dedicated storage.
+
+Checks:
+- Inline JavaScript syntax check: PASS
+- Hosted server JavaScript syntax check: PASS
+
+NOT COMPLETE / NOT LAUNCH READY:
+- No live Supabase credentials are configured in this package.
+- Cloud sync has not been live-tested against your project.
+- Frontend API base URL still needs to be set to deployed backend URL.
+- Note video media remains in browser IndexedDB and is NOT cloud synced.
+- Large inline note images may exceed snapshot size limits; dedicated Supabase Storage is needed.
+- AI action/functionality beyond text reply is not implemented in hosted backend yet.
+- Needs two-account RLS isolation test and final security review.

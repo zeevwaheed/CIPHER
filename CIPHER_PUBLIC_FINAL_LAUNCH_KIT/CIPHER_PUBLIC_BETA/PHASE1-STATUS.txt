@@ -1,0 +1,21 @@
+CIPHER Phase 1 — Authentication Integration (in progress)
+
+Audit findings:
+- Original login/signup stored a plaintext password in browser localStorage. This is not acceptable for a hosted public application.
+- Finance entries/income/savings target, chats, memories, personality, and sticky notes are currently browser-local and are NOT cloud synchronized yet.
+- Hosted server API was a scaffold and chat frontend did not send Supabase auth tokens.
+
+Implemented in this phase:
+- Replaced the frontend local password login with Supabase Auth email/password sign-up and sign-in.
+- Added Supabase client initialization and persisted auth sessions.
+- Added cloud profile loading/upsert (display name, username, date of birth, sex).
+- Added password reset email request flow.
+- Removed the plaintext password storage/login flow from frontend code.
+- Added SQL profile columns and case-insensitive unique username index.
+
+Still incomplete and not launch-ready:
+- Supabase URL and anon/public key placeholders need to be configured in public.html.
+- Cloud profile SQL patch needs to be run.
+- Finance, chat, memories, personality, notes, and media still need cloud persistence integration.
+- Chat API needs to receive and validate the Supabase session token.
+- Hosted deployment and security tests have not been performed.

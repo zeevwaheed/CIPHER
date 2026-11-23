@@ -1,0 +1,8 @@
+{
+  "name": "cipher-public-beta",
+  "version": "0.3.0",
+  "private": true,
+  "description": "CIPHER free personal finance companion public beta",
+  "scripts": {"start": "node server-hosted.js", "test": "node test-hosted-server.js"},
+  "engines": {"node": ">=20"}
+}

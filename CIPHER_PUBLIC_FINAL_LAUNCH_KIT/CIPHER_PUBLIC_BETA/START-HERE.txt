@@ -1,0 +1,15 @@
+CIPHER FINAL LAUNCH KIT — START HERE
+
+1. Read README-FINAL-LAUNCH.md first.
+2. Apply infra/supabase/phase3-required-schema.sql in your Supabase SQL Editor.
+3. Create private GitHub repository and upload/extract this project (root files should include package.json, server-hosted.js, render.yaml and public/).
+4. Deploy the Render Blueprint using render.yaml.
+5. Add secrets to the Render Environment page only; never commit secrets:
+   SUPABASE_URL
+   SUPABASE_ANON_KEY
+   OPENROUTER_API_KEY
+6. After deployment, add your Render service URL to Supabase Authentication Site URL and redirect allow-list.
+7. Complete the live verification checklist in README-FINAL-LAUNCH.md before public sharing.
+
+
+CIPHER has NOT been deployed or live-tested with your accounts. See the final launch guide for known limitations.
